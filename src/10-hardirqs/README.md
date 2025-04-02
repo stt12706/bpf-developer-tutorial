@@ -51,6 +51,10 @@ const volatile bool targ_dist = false;
 const volatile bool targ_ns = false;
 const volatile bool do_count = false;
 
+struct irq_key {
+ char name[32];
+};
+
 struct {
  __uint(type, BPF_MAP_TYPE_CGROUP_ARRAY);
  __type(key, u32);
